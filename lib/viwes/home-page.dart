@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:note_app/widght/custom-body.dart';
 
 class Homepage extends StatelessWidget {
   const Homepage({super.key});
@@ -6,7 +7,7 @@ class Homepage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: Text('NOTES'), backgroundColor: Colors.blue),
+     body:const Custombody(),
     );
   }
 }
