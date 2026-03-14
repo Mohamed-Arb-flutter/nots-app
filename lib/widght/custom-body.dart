@@ -13,12 +13,10 @@ class Custombody extends StatelessWidget {
         children: [
           SizedBox(height: 40),
           Customappbar(),
-          SizedBox(height: 10),
+          // SizedBox(height: 10),
           Expanded(child: const customListviwe()),
         ],
       ),
     );
   }
 }
-
-
