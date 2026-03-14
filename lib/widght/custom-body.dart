@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:note_app/widght/Note-item.dart';
 import 'package:note_app/widght/custom-appbar.dart';
+import 'package:note_app/widght/custom-listviwe.dart';
 
 class Custombody extends StatelessWidget {
   const Custombody({super.key});
@@ -14,10 +14,11 @@ class Custombody extends StatelessWidget {
           SizedBox(height: 40),
           Customappbar(),
           SizedBox(height: 10),
-          NoteItem(),
+          Expanded(child: const customListviwe()),
         ],
       ),
     );
   }
 }
+
 
