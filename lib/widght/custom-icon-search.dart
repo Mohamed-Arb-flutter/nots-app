@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 
 class customsearchicon extends StatelessWidget {
-  const customsearchicon({super.key});
-
+  const customsearchicon({super.key, required this.icon,});
+   final IconData icon;
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -12,7 +12,7 @@ class customsearchicon extends StatelessWidget {
         color: Colors.white.withAlpha(10),
         borderRadius: BorderRadius.circular(16),
       ),
-      child: Center(child:const Icon(Icons.search, size: 28)),
+      child: Center(child:Icon(icon,size: 28)),
     );
   }
 }
