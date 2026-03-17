@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:note_app/widght/constans.dart';
 
 class Customtextfiled extends StatelessWidget {
   Customtextfiled({super.key, required this.hint, this.masline});
@@ -11,8 +12,16 @@ class Customtextfiled extends StatelessWidget {
       maxLines: masline,
       decoration: InputDecoration(
         hint: Text(hint),
+        hintStyle: TextStyle(color: kprimrycolor),
         //hintMaxLines: masline,
-        border: OutlineInputBorder(),
+        enabledBorder: OutlineInputBorder(
+          borderRadius: BorderRadius.circular(16),
+          borderSide: BorderSide(color: Colors.white),
+        ),
+        focusedBorder: OutlineInputBorder(
+          borderRadius: BorderRadius.circular(16),
+          borderSide: BorderSide(color: kprimrycolor),
+        ),
       ),
     );
   }
