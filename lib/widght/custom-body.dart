@@ -12,7 +12,7 @@ class Custombody extends StatelessWidget {
       child: const Column(
         children: [
           SizedBox(height: 40),
-          Customappbar(),
+          Customappbar(titletex: 'Notes',),
           // SizedBox(height: 10),
           Expanded(child: const customListviwe()),
         ],

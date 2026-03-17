@@ -2,14 +2,14 @@ import 'package:flutter/material.dart';
 import 'package:note_app/widght/custom-icon-search.dart';
 
 class Customappbar extends StatelessWidget {
-  const Customappbar({super.key});
-
+  const Customappbar({super.key, required this.titletex});
+  final String titletex;
   @override
   Widget build(BuildContext context) {
-    return const Row(
-      children: const [
+    return Row(
+      children: [
         Text(
-          'Notes',
+          titletex,
           style: TextStyle(fontWeight: FontWeight.bold, fontSize: 28),
         ),
         Spacer(flex: 1),
