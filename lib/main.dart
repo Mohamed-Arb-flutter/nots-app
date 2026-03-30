@@ -3,11 +3,13 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:hive_flutter/hive_flutter.dart';
 import 'package:note_app/cubits/Add_note_cubit/add_note_cubit.dart';
 import 'package:note_app/models/note-model.dart';
+import 'package:note_app/simble_block_observe.dart';
 import 'package:note_app/viwes/home-page.dart';
 import 'package:note_app/widght/constans.dart';
 
 void main() async {
   await Hive.initFlutter();
+  Bloc.observer = SimbleBlockObserve();
   await Hive.openBox(knotesbox);
   Hive.registerAdapter(NotemodelAdapter());
   runApp(const MyApp());

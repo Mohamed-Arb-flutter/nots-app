@@ -15,7 +15,7 @@ class noteiconbottmsheets extends StatelessWidget {
         child: BlocConsumer<AddNoteCubit, AddNoteState>(
           listener: (context, state) {
             if (state is AddNotefailuer) {
-              print('filed');
+              print('filed${state.errMassge}');
             }
             if (state is AddNoteSuccess) {
               Navigator.pop(context);
@@ -24,7 +24,7 @@ class noteiconbottmsheets extends StatelessWidget {
           builder: (context, state) {
             return ModalProgressHUD(
               inAsyncCall: state is AddNoteLoding ? true : false,
-              child:const AddNoteForm(),
+              child: const AddNoteForm(),
             );
           },
         ),
