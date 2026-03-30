@@ -30,6 +30,10 @@ class Customtextfiled extends StatelessWidget {
           borderRadius: BorderRadius.circular(16),
           borderSide: BorderSide(color: kprimrycolor),
         ),
+        errorBorder: OutlineInputBorder(
+          borderRadius: BorderRadius.circular(16),
+          borderSide: BorderSide(color: Colors.red),
+        ),
       ),
     );
   }
