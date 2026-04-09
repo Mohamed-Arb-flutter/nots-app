@@ -12,7 +12,7 @@ class NoteItem extends StatelessWidget {
           context,
           MaterialPageRoute(
             builder: (context) {
-              return Noteviwe();
+              return const Noteviwe();
             },
           ),
         );
@@ -20,7 +20,7 @@ class NoteItem extends StatelessWidget {
       child: Container(
         padding: const EdgeInsets.only(top: 24, bottom: 24, left: 16),
         decoration: BoxDecoration(
-          color: Color(0xffFFCC80),
+          color: const Color(0xffFFCC80),
           borderRadius: BorderRadius.circular(16),
         ),
         child: Column(
@@ -44,7 +44,7 @@ class NoteItem extends StatelessWidget {
               ),
               trailing: IconButton(
                 onPressed: () {},
-                icon: Icon(Icons.delete, color: Colors.black, size: 32),
+                icon: const Icon(Icons.delete, color: Colors.black, size: 32),
               ),
             ),
             Padding(

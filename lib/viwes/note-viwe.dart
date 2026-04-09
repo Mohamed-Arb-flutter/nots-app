@@ -7,6 +7,6 @@ class Noteviwe extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(body: Bodyviwenote(),);
+    return const Scaffold(body: Bodyviwenote(),);
   }
 }

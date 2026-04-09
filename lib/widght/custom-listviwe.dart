@@ -10,7 +10,7 @@ class customListviwe extends StatelessWidget {
       padding: const EdgeInsets.only(bottom: 16),
       child: ListView.builder(
         itemBuilder: (context, index) {
-          Padding(padding: EdgeInsets.zero);
+          const Padding(padding: EdgeInsets.zero);
           return const Padding(
             padding: EdgeInsets.symmetric(vertical: 8),
             child: NoteItem(),

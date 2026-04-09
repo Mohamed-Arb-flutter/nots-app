@@ -11,11 +11,11 @@ class Bodyviwenote extends StatelessWidget {
       padding: const EdgeInsets.symmetric(horizontal: 24),
       child: Column(
         children: [
-          SizedBox(height: 40),
-          Customappbar(titletex: 'Edit Note',icon: Icons.check,),
-          SizedBox(height: 20),
+          const SizedBox(height: 40),
+          const Customappbar(titletex: 'Edit Note', icon: Icons.check),
+          const SizedBox(height: 20),
           Customtextfiled(hint: 'title'),
-          SizedBox(height: 15),
+          const SizedBox(height: 15),
           Customtextfiled(hint: 'Contant', masline: 5),
         ],
       ),

@@ -20,19 +20,19 @@ class Customtextfiled extends StatelessWidget {
       maxLines: masline,
       decoration: InputDecoration(
         hint: Text(hint),
-        hintStyle: TextStyle(color: kprimrycolor),
+        hintStyle: const TextStyle(color: kprimrycolor),
         //hintMaxLines: masline,
         enabledBorder: OutlineInputBorder(
           borderRadius: BorderRadius.circular(16),
-          borderSide: BorderSide(color: Colors.white),
+          borderSide: const BorderSide(color: Colors.white),
         ),
         focusedBorder: OutlineInputBorder(
           borderRadius: BorderRadius.circular(16),
-          borderSide: BorderSide(color: kprimrycolor),
+          borderSide: const BorderSide(color: kprimrycolor),
         ),
         errorBorder: OutlineInputBorder(
           borderRadius: BorderRadius.circular(16),
-          borderSide: BorderSide(color: Colors.red),
+          borderSide: const BorderSide(color: Colors.red),
         ),
       ),
     );

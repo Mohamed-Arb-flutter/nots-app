@@ -11,6 +11,7 @@ class Homepage extends StatelessWidget {
       floatingActionButton: FloatingActionButton(
         onPressed: () {
           showModalBottomSheet(
+            isScrollControlled: true,
             shape: RoundedRectangleBorder(
               borderRadius: BorderRadiusGeometry.circular(16),
             ),
@@ -20,7 +21,7 @@ class Homepage extends StatelessWidget {
             },
           );
         },
-        child: Icon(Icons.add),
+        child: const Icon(Icons.add),
       ),
       body: const Custombody(),
     );

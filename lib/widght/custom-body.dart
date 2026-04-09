@@ -14,7 +14,7 @@ class Custombody extends StatelessWidget {
           SizedBox(height: 40),
           Customappbar(titletex: 'Notes', icon: Icons.search),
           // SizedBox(height: 10),
-          Expanded(child: const customListviwe()),
+          Expanded(child: customListviwe()),
         ],
       ),
     );
