@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:hive_flutter/hive_flutter.dart';
+import 'package:note_app/cubits/cubit/nots_cubit_cubit.dart';
 import 'package:note_app/models/note-model.dart';
 import 'package:note_app/simble_block_observe.dart';
 import 'package:note_app/viwes/home-page.dart';
@@ -20,10 +21,13 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      debugShowCheckedModeBanner: false,
-      theme: ThemeData(brightness: Brightness.dark, fontFamily: 'Poppins'),
-      home: const Homepage(),
+    return BlocProvider(
+      create: (context) => NotsCubitCubit(),
+      child: MaterialApp(
+        debugShowCheckedModeBanner: false,
+        theme: ThemeData(brightness: Brightness.dark, fontFamily: 'Poppins'),
+        home: const Homepage(),
+      ),
     );
   }
 }
