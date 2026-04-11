@@ -2,14 +2,22 @@ import 'package:flutter/material.dart';
 import 'package:note_app/widght/constans.dart';
 
 class Customtextfiled extends StatelessWidget {
-  Customtextfiled({super.key, required this.hint, this.masline, this.onsaved});
+  Customtextfiled({
+    super.key,
+    required this.hint,
+    this.masline,
+    this.onsaved,
+    this.onChanged,
+  });
   final String hint;
+  final void Function(String)? onChanged;
   int? masline;
   final void Function(String?)? onsaved;
   @override
   Widget build(BuildContext context) {
     return TextFormField(
       onSaved: onsaved,
+      onChanged: onChanged,
       validator: (value) {
         if (value?.isEmpty ?? true) {
           return "filed is reaquired";

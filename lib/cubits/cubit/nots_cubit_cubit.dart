@@ -8,15 +8,11 @@ part 'nots_cubit_state.dart';
 
 class NotsCubitCubit extends Cubit<NotsCubitState> {
   NotsCubitCubit() : super(NotsCubitInitial());
+  List<Notemodel>? nots;
   fetchAllNotes() async {
-    emit(NotsCubitInitial());
-    try {
-      var notsbox = Hive.box<Notemodel>(knotesbox);
+    var notsbox = Hive.box<Notemodel>(knotesbox);
 
-      List<Notemodel> nots = notsbox.values.toList();
-      emit(NotsCubitsucces(nots));
-    } catch (e) {
-      emit(NotsCubitfailure(e.toString()));
-    }
+    nots = notsbox.values.toList();
+    emit(NotsCubitSuccess());
   }
 }

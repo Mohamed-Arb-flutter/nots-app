@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:intl/intl.dart';
 import 'package:note_app/cubits/Add_note_cubit/add_note_cubit.dart';
 import 'package:note_app/models/note-model.dart';
+import 'package:note_app/widght/colors_list_viwe.dart';
 import 'package:note_app/widght/custom-bottom.dart';
 import 'package:note_app/widght/custom-text-filed.dart';
 
@@ -37,7 +39,9 @@ class _AddNoteFormState extends State<AddNoteForm> {
               subtitle = value;
             },
           ),
-          const SizedBox(height: 100),
+          const SizedBox(height: 20),
+          const viweitemcolor(),
+          const SizedBox(height: 20),
           BlocBuilder<AddNoteCubit, AddNoteState>(
             builder: (context, state) {
               return Padding(
@@ -47,10 +51,13 @@ class _AddNoteFormState extends State<AddNoteForm> {
                   onTap: () {
                     if (formKey.currentState!.validate()) {
                       formKey.currentState!.save();
+
                       var noteitem = Notemodel(
                         title: title!,
                         subtitle: subtitle!,
-                        date: DateTime.now().toString(),
+                        date: DateFormat.yMMMd().add_jm().format(
+                          DateTime.now(),
+                        ),
                         color: Colors.blue.value,
                       );
                       BlocProvider.of<AddNoteCubit>(context).AddNote(noteitem);
